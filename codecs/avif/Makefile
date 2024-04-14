@@ -115,7 +115,7 @@ $(LIBWEBP_DIR)/CMakeLists.txt: $(CODEC_DIR)/CMakeLists.txt
 $(LIBSHARPYUV_ST): $(LIBWEBP_DIR)/CMakeLists.txt
 	mkdir -p $(@D)
 	emcmake cmake \
-		-DCMAKE_DISABLE_FIND_PACKAGE_Threads=1 \
+		-DWEBP_BUILD_WEBP_JS=ON \
 		-DWEBP_BUILD_ANIM_UTILS=OFF \
 		-DWEBP_BUILD_CWEBP=OFF \
 		-DWEBP_BUILD_DWEBP=OFF \
